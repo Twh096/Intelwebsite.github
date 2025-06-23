@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Intel Timeline & More</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+ <style>
+   /* Basic RTL support */
+   body[dir="rtl"] {
+     direction: rtl;
+     text-align: right;
+   }
+   body[dir="rtl"] .timeline-card {
+     text-align: right;
+   }
+   body[dir="rtl"] .product-card {
+     text-align: right;
+   }
+   /* Optional: flip flex rows for RTL */
+   body[dir="rtl"] .row {
+     flex-direction: row-reverse;
+   }
+   /* You can add more RTL-specific styles here */
+
+   /* Custom styles for navbar */
+   .navbar.bg-primary {
+     background-color: #0071c5 !important;
+   }
+   .navbar .nav-link.text-white {
+     color: #fff !important;
+   }
+   .navbar .btn-outline-light {
+     border-color: #fff;
+     color: #fff;
+   }
+   .navbar .btn-outline-light:hover {
+     background: #fff;
+     color: #0071c5;
+   }
+   .navbar .btn-light {
+     color: #0071c5;
+     background: #fff;
+     border: none;
+   }
+ </style>
+</head>
+<body>
+ <!-- New Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3 mt-3">
+   <a class="navbar-brand" href="#">Intel</a>
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       <li class="nav-item"><a class="nav-link text-white" href="#">Products</a></li>
+       <li class="nav-item"><a class="nav-link text-white" href="#">Supporters</a></li>
+       <li class="nav-item"><a class="nav-link text-white" href="#">Development</a></li>
+       <li class="nav-item"><a class="nav-link text-white" href="#">Partners</a></li>
+       <li class="nav-item"><a class="nav-link text-white" href="#">Solutions</a></li>
+       <li class="nav-item"><a class="nav-link text-white" href="#">Foundry</a></li>
+     </ul>
+     <form class="d-flex align-items-center" role="search" onsubmit="return false;">
+       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+       <button class="btn btn-outline-light me-2" type="submit">Search</button>
+       <select class="form-select w-auto me-2" aria-label="Select language" style="min-width: 110px;">
+         <option value="en" selected>English</option>
+         <option value="es">Español</option>
+         <option value="fr">Français</option>
+         <option value="de">Deutsch</option>
+         <option value="zh">中文</option>
+         <option value="ar">العربية</option>
+         <option value="ja">日本語</option>
+       </select>
+       <button class="btn btn-light" type="button" id="signInBtn">Sign In</button>
+     </form>
+   </div>
+ </nav>
+
+ <div class="container my-5">
+  <div class="d-flex justify-content-center">
+    <div style="background: #0071c5; border-radius: 32px; box-shadow: 0 4px 32px rgba(0,0,0,0.10); padding: 4rem 2.5rem; min-width: 420px; max-width: 600px; width: 100%;">
+      <div class="text-center mb-4">
+        <span style="color: #fff; font-size: 2.8rem; font-weight: 700; letter-spacing: 1px;" data-lang="welcome">Welcome to Intel!</span>
+      </div>
+      <div style="background: #fff; border-radius: 20px; padding: 2.5rem;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Intel-logo-2022.png/960px-Intel-logo-2022.png"
+             alt="Intel Logo" style="max-width: 360px; width: 100%; height: auto; display: block; margin: auto;" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Intro Text -->
+ <div class="text-center my-5 px-3">
+   <p style="color: #0071c5; font-size: 1.3rem; max-width: 960px; margin: auto;" data-lang="intro">
+     From pioneering the microprocessor in 1971 to driving innovation in AI and advanced computing today,
+     Intel’s journey is defined by breakthrough technology and a commitment to shaping the future. Our goal is to
+     empower every person and organization on the planet to achieve more through world-changing innovation.
+   </p>
+ </div>
+
+ <!-- Blue background for timeline and modern era -->
+ <div style="background: #0071c5; padding: 3rem 0;">
+  <!-- Timeline Section -->
+  <section class="summary-section">
+    <h2 class="text-center" data-lang="summary" style="color: #fff;">Summary</h2>
+    <div class="container">
+      <div class="row justify-content-center g-4">
+        <!-- Left Card -->
+        <div class="col-md-4">
+          <div style="background: #fff; border-radius: 20px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2rem; height: 100%;">
+            <div class="timeline-title"
+                 style="color: #0071c5; font-size: 2.1rem; font-weight: 800; margin-bottom: 0.5rem;">
+              1968–1970s
+            </div>
+            <div class="timeline-subtitle" data-lang="founding"
+                 style="font-size: 1.25rem; color: #6c757d; font-weight: 500;">
+              Founding and Early Years
+            </div>
+            <img src="https://www.edn.com/wp-content/uploads/contenteetimes-images-ednmoments-intel-founders-800.jpg"
+                 alt="Founders" class="img-fluid mt-3" style="border-radius: 12px;" />
+          </div>
+        </div>
+        <!-- Center Card -->
+        <div class="col-md-4">
+          <div style="background: #fff; border-radius: 20px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2rem; height: 100%;">
+            <div class="timeline-title"
+                 style="color: #0071c5; font-size: 2.1rem; font-weight: 800; margin-bottom: 0.5rem;">
+              1980s–1990s
+            </div>
+            <div class="timeline-subtitle" data-lang="growth"
+                 style="font-size: 1.25rem; color: #6c757d; font-weight: 500;">
+              Growth and Dominance
+            </div>
+            <img src="https://images.ctfassets.net/ytpxmi3h6kca/6HFwS81Yh4G40v2IhBGUX7/cce5f07759037c96bd14ee97f3ec0e68/1982_286_200dpi.jpg"
+                 alt="Intel 1982" class="img-fluid mt-3" style="border-radius: 12px;" />
+          </div>
+        </div>
+        <!-- Right Card -->
+        <div class="col-md-4">
+          <div style="background: #fff; border-radius: 20px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2rem; height: 100%;">
+            <div class="timeline-title"
+                 style="color: #0071c5; font-size: 2.1rem; font-weight: 800; margin-bottom: 0.5rem;">
+              2000s
+            </div>
+            <div class="timeline-subtitle" data-lang="diversification"
+                 style="font-size: 1.25rem; color: #6c757d; font-weight: 500;">
+              Diversification and Competition
+            </div>
+            <img src="https://lh3.googleusercontent.com/proxy/BLBJEHZp-beIRaagcVQZP5XBoE1hQaMEssqI5MTIZNWUCuufztpG654PT447x6bzjE-JSoS2X5ymU1mZULH5cdas9fusxK0"
+                 alt="Intel 2000s" class="img-fluid mt-3" style="border-radius: 12px;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ </div>
+
+
+ <!-- Modern Era Section (centered, blue text, separated from blue box above) -->
+ <section class="modern-era">
+  <div class="container my-5">
+    <div class="text-center">
+      <h3 data-lang="modernEraTitle" style="color: #0071c5;">Modern Era (2010s–Present)</h3>
+      <p data-lang="modernEraDesc" style="color: #0071c5; max-width: 700px; margin: 1.5rem auto 0 auto; font-size: 1.15rem;">
+        Intel faced challenges in keeping up with advanced chip manufacturing compared to competitors like TSMC and AMD, especially in the 2010s.
+        However, it remains a major player in CPUs, AI hardware, networking, and cloud computing. Under recent leadership, Intel is investing heavily
+        in U.S.-based chip fabrication plants and aiming to become a global semiconductor foundry.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Products Section (centered heading, blue background and text for all content below Modern Era) -->
+ <div style="background: #0071c5; padding: 3rem 0;">
+  <section class="products-section">
+    <div class="container">
+      <h3 data-lang="ourProducts" class="text-center" style="color: #fff;">Our Products</h3>
+      <div class="row g-4 justify-content-center">
+        <!-- Processors Card -->
+        <div class="col-md-4 col-sm-6">
+          <div style="background: #fff; border-radius: 20px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 1.5rem; height: 100%;" class="text-center">
+            <img src="https://m.media-amazon.com/images/I/614OeWBEtZL.jpg" alt="Processors" class="img-fluid mb-3" style="border-radius: 12px;" />
+            <h5 style="color: #0071c5; font-size: 1.5rem; font-weight: 700;" data-lang="processors">Processors</h5>
+            <p data-lang="processorsDesc" style="color: #6c757d; font-weight: 700;">High-performance CPUs for desktops, laptops, and servers, including the Intel Core and Xeon families.</p>
+          </div>
+        </div>
+        <!-- Graphics Card -->
+        <div class="col-md-4 col-sm-6">
+          <div style="background: #fff; border-radius: 20px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 1.5rem; height: 100%;" class="text-center">
+            <img src="https://intelcorp.scene7.com/is/image/intelcorp/edited-igs-home-page:1920-1080?wid=864&hei=486&fmt=webp-alpha" alt="Graphics" class="img-fluid mb-3" style="border-radius: 12px;" />
+            <h5 style="color: #0071c5; font-size: 1.5rem; font-weight: 700;" data-lang="graphics">Graphics</h5>
+            <p data-lang="graphicsDesc" style="color: #6c757d; font-weight: 700;">Integrated and discrete graphics solutions delivering stunning visuals and smooth gaming experiences.</p>
+          </div>
+        </div>
+        <!-- FPGA & AI Card -->
+        <div class="col-md-4 col-sm-6">
+          <div style="background: #fff; border-radius: 20px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 1.5rem; height: 100%;" class="text-center">
+            <img src="https://cfotech.in/uploads/story/2024/03/01/compatible_img-SlKRGbwuBj9sFMvMvNNgBvUD.jpg" alt="FPGA & AI" class="img-fluid mb-3" style="border-radius: 12px;" />
+            <h5 style="color: #0071c5; font-size: 1.5rem; font-weight: 700;" data-lang="fpgaAi">FPGA & AI</h5>
+            <p data-lang="fpgaAiDesc" style="color: #6c757d; font-weight: 700;">Advanced FPGA and AI acceleration solutions for data centers, networking, and edge computing.</p>
+          </div>
+        </div>
+      </div> <!-- end row for product cards -->
+      <!-- Add spacing below the product cards -->
+      <div class="my-5"></div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div style="background: #fff; border-radius: 20px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 1.5rem; margin-bottom: 2.5rem;">
+            <!-- Latest News Section -->
+            <section class="news-section">
+              <h3 data-lang="latestNews" class="text-center" style="color: #0071c5; font-weight: 700;">Latest News</h3>
+              <ul style="list-style: none; padding: 0; margin: 2rem 0 0 0;">
+                <li class="mb-3 text-center" style="color: #0071c5; font-weight: 600;">
+                  <strong>June 2025:</strong> <span data-lang="news1">Intel announces next-gen AI chips boosting data center efficiency.</span>
+                  <a href="#" data-lang="readMore" style="color: #0071c5; font-weight: 700; margin-left: 0.5rem;">Read More</a>
+                </li>
+                <li class="mb-3 text-center" style="color: #0071c5; font-weight: 600;">
+                  <strong>May 2025:</strong> <span data-lang="news2">Expansion of Intel’s U.S.-based chip fabrication facilities underway.</span>
+                  <a href="#" data-lang="readMore" style="color: #0071c5; font-weight: 700; margin-left: 0.5rem;">Read More</a>
+                </li>
+                <li class="mb-3 text-center" style="color: #0071c5; font-weight: 600;">
+                  <strong>April 2025:</strong> <span data-lang="news3">Intel partners with automotive leaders to accelerate autonomous vehicle technology.</span>
+                  <a href="#" data-lang="readMore" style="color: #0071c5; font-weight: 700; margin-left: 0.5rem;">Read More</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div style="background: #fff; border-radius: 20px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 1.5rem;">
+            <!-- Careers Section -->
+            <section class="careers-section">
+              <h3 data-lang="joinTeam" class="text-center" style="color: #0071c5; font-weight: 700;">Join Our Team</h3>
+              <p data-lang="joinDesc" class="text-center" style="color: #0071c5; font-weight: 600;">
+                Be part of a global leader driving innovation and shaping the future of technology. Explore exciting career opportunities and help us build the world of tomorrow.
+              </p>
+              <div class="text-center mt-4">
+                <a href="#" data-lang="viewOpenPositions" style="color: #0071c5; font-weight: 700; font-size: 1.1rem; text-decoration: underline;">View Open Positions</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div> <!-- End of blue background for products/news/careers -->
+
+<!-- Add spacing and a white background for the contact section -->
+<div style="background: #fff; padding: 3rem 0 2rem 0;">
+  <section class="contact-location">
+    <div class="container text-center">
+      <h4 data-lang="contactLocation" style="color: #343a40; font-weight: 700;">Contact &amp; Location</h4>
+      <p data-lang="intelHeadquarters" style="color: #343a40; font-weight: 600;">Intel Corporate Headquarters</p>
+      <p style="color: #343a40;">2200 Innovation Way, Santa Clara, CA 95054, USA</p>
+      <p style="color: #343a40;">Phone: +1 (408) 555-1234</p>
+      <p style="color: #343a40;">Email: <a href="mailto:info@intel-example.com" style="color: #343a40; text-decoration: underline;">info@intel-example.com</a></p>
+    </div>
+  </section>
+</div>
+
+
+ <!-- Modals -->
+ <div class="modal fade" id="modal1960s" tabindex="-1" aria-labelledby="modal1960sLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="modal1960sLabel" data-lang="modal1960sTitle">1968–1970s: Founding and Early Years</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body" data-lang="modal1960sBody">
+       Intel was founded in 1968 by Robert Noyce and Gordon Moore, both former employees of Fairchild Semiconductor.
+       They named the company Intel, short for “Integrated Electronics.” Their goal was to build advanced semiconductor memory products.
+       In 1971, Intel released the 4004, the world’s first commercial microprocessor, which revolutionized computing.
+     </div>
+   </div></div>
+ </div>
+
+
+ <div class="modal fade" id="modal1980s" tabindex="-1" aria-labelledby="modal1980sLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="modal1980sLabel" data-lang="modal1980sTitle">1980s–1990s: Growth and Dominance</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body" data-lang="modal1980sBody">
+       In the 1980s, Intel shifted focus to microprocessors, becoming the main supplier for IBM PCs.
+       The release of the Intel 8086 and later the Pentium series helped Intel dominate the personal computer market.
+       Their “Intel Inside” marketing campaign made the brand a household name.
+     </div>
+   </div></div>
+ </div>
+
+
+ <div class="modal fade" id="modal2000s" tabindex="-1" aria-labelledby="modal2000sLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="modal2000sLabel" data-lang="modal2000sTitle">2000s: Diversification and Competition</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body" data-lang="modal2000sBody">
+       As competition increased from AMD and global chipmakers, Intel expanded into areas like server processors, mobile chips, and data centers.
+       The company also began investing in research and development to stay ahead in technology innovation.
+     </div>
+   </div></div>
+ </div>
+
+
+ <!-- Bootstrap JS Bundle -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+ <script>
+   // Translation dictionary
+   const translations = {
+     en: {
+       brand: "Intel",
+       products: "Products",
+       supporters: "Supporters",
+       development: "Development",
+       partners: "Partners",
+       solutions: "Solutions",
+       foundry: "Foundry",
+       search: "Search",
+       signin: "Sign In",
+       welcome: "Welcome to Intel!",
+       intro: "From pioneering the microprocessor in 1971 to driving innovation in AI and advanced computing today, Intel’s journey is defined by breakthrough technology and a commitment to shaping the future. Our goal is to empower every person and organization on the planet to achieve more through world-changing innovation.",
+       summary: "Summary",
+       founding: "Founding and Early Years",
+       growth: "Growth and Dominance",
+       diversification: "Diversification and Competition",
+       modernEraTitle: "Modern Era (2010s–Present)",
+       modernEraDesc: "Intel faced challenges in keeping up with advanced chip manufacturing compared to competitors like TSMC and AMD, especially in the 2010s. However, it remains a major player in CPUs, AI hardware, networking, and cloud computing. Under recent leadership, Intel is investing heavily in U.S.-based chip fabrication plants and aiming to become a global semiconductor foundry.",
+       ourProducts: "Our Products",
+       processors: "Processors",
+       processorsDesc: "High-performance CPUs for desktops, laptops, and servers, including the Intel Core and Xeon families.",
+       graphics: "Graphics",
+       graphicsDesc: "Integrated and discrete graphics solutions delivering stunning visuals and smooth gaming experiences.",
+       fpgaAi: "FPGA & AI",
+       fpgaAiDesc: "Advanced FPGA and AI acceleration solutions for data centers, networking, and edge computing.",
+       latestNews: "Latest News",
+       news1: "Intel announces next-gen AI chips boosting data center efficiency.",
+       news2: "Expansion of Intel’s U.S.-based chip fabrication facilities underway.",
+       news3: "Intel partners with automotive leaders to accelerate autonomous vehicle technology.",
+       readMore: "Read More",
+       joinTeam: "Join Our Team",
+       joinDesc: "Be part of a global leader driving innovation and shaping the future of technology. Explore exciting career opportunities and help us build the world of tomorrow.",
+       viewOpenPositions: "View Open Positions",
+       contactLocation: "Contact & Location",
+       intelHeadquarters: "Intel Corporate Headquarters",
+       modal1960sTitle: "1968–1970s: Founding and Early Years",
+       modal1960sBody: "Intel was founded in 1968 by Robert Noyce and Gordon Moore, both former employees of Fairchild Semiconductor. They named the company Intel, short for “Integrated Electronics.” Their goal was to build advanced semiconductor memory products. In 1971, Intel released the 4004, the world’s first commercial microprocessor, which revolutionized computing.",
+       modal1980sTitle: "1980s–1990s: Growth and Dominance",
+       modal1980sBody: "In the 1980s, Intel shifted focus to microprocessors, becoming the main supplier for IBM PCs. The release of the Intel 8086 and later the Pentium series helped Intel dominate the personal computer market. Their “Intel Inside” marketing campaign made the brand a household name.",
+       modal2000sTitle: "2000s: Diversification and Competition",
+       modal2000sBody: "As competition increased from AMD and global chipmakers, Intel expanded into areas like server processors, mobile chips, and data centers. The company also began investing in research and development to stay ahead in technology innovation."
+     },
+     es: {
+       brand: "Intel",
+       products: "Productos",
+       supporters: "Patrocinadores",
+       development: "Desarrollo",
+       partners: "Socios",
+       solutions: "Soluciones",
+       foundry: "Fundición",
+       search: "Buscar",
+       signin: "Iniciar sesión",
+       welcome: "¡Bienvenido a Intel!",
+       intro: "Desde la pionera del microprocesador en 1971 hasta impulsar la innovación en IA y computación avanzada hoy, el viaje de Intel está definido por tecnología revolucionaria y un compromiso para moldear el futuro. Nuestro objetivo es empoderar a cada persona y organización en el planeta para lograr más mediante la innovación que cambia el mundo.",
+       summary: "Resumen",
+       founding: "Fundación y primeros años",
+       growth: "Crecimiento y dominio",
+       diversification: "Diversificación y competencia",
+       modernEraTitle: "Era moderna (2010–presente)",
+       modernEraDesc: "Intel enfrentó desafíos para mantenerse al día con la fabricación avanzada de chips en comparación con competidores como TSMC y AMD, especialmente en la década de 2010. Sin embargo, sigue siendo un actor importante en CPU, hardware de IA, redes y computación en la nube. Bajo el liderazgo reciente, Intel está invirtiendo mucho en plantas de fabricación de chips basadas en EE.UU. y apunta a convertirse en una fundición global de semiconductores.",
+       ourProducts: "Nuestros productos",
+       processors: "Procesadores",
+       processorsDesc: "CPUs de alto rendimiento para computadoras de escritorio, portátiles y servidores, incluidas las familias Intel Core y Xeon.",
+       graphics: "Gráficos",
+       graphicsDesc: "Soluciones gráficas integradas y discretas que ofrecen imágenes impresionantes y experiencias de juego fluidas.",
+       fpgaAi: "FPGA y IA",
+       fpgaAiDesc: "Soluciones avanzadas de aceleración FPGA y IA para centros de datos, redes y computación en el borde.",
+       latestNews: "Últimas noticias",
+       news1: "Intel anuncia chips de IA de próxima generación que mejoran la eficiencia del centro de datos.",
+       news2: "Expansión de las instalaciones de fabricación de chips basadas en EE.UU. de Intel en marcha.",
+       news3: "Intel se asocia con líderes automotrices para acelerar la tecnología de vehículos autónomos.",
+       readMore: "Leer más",
+       joinTeam: "Únete a nuestro equipo",
+       joinDesc: "Forma parte de un líder global que impulsa la innovación y da forma al futuro de la tecnología. Explora emocionantes oportunidades profesionales y ayúdanos a construir el mundo del mañana.",
+       viewOpenPositions: "Ver puestos abiertos",
+       contactLocation: "Contacto y ubicación",
+       intelHeadquarters: "Sede corporativa de Intel",
+       modal1960sTitle: "1968–1970s: Fundación y primeros años",
+       modal1960sBody: "Intel fue fundada en 1968 por Robert Noyce y Gordon Moore, ambos ex empleados de Fairchild Semiconductor. Nombraron a la empresa Intel, abreviatura de “Electrónica Integrada.” Su objetivo era construir productos avanzados de memoria semiconductora. En 1971, Intel lanzó el 4004, el primer microprocesador comercial del mundo, que revolucionó la informática.",
+       modal1980sTitle: "1980s–1990s: Crecimiento y dominio",
+       modal1980sBody: "En los años 80, Intel cambió su enfoque a los microprocesadores, convirtiéndose en el principal proveedor para las PC de IBM. El lanzamiento del Intel 8086 y más tarde la serie Pentium ayudaron a Intel a dominar el mercado de computadoras personales. Su campaña de marketing “Intel Inside” convirtió la marca en un nombre familiar.",
+       modal2000sTitle: "2000s: Diversificación y competencia",
+       modal2000sBody: "A medida que aumentó la competencia de AMD y fabricantes globales de chips, Intel se expandió a áreas como procesadores para servidores, chips móviles y centros de datos. La empresa también comenzó a invertir en investigación y desarrollo para mantenerse a la vanguardia de la innovación tecnológica."
+     },
+     fr: {
+       brand: "Intel",
+       products: "Produits",
+       supporters: "Supporteurs",
+       development: "Développement",
+       partners: "Partenaires",
+       solutions: "Solutions",
+       foundry: "Fonderie",
+       search: "Rechercher",
+       signin: "Connexion",
+       welcome: "Bienvenue chez Intel !",
+       intro: "De la création du microprocesseur en 1971 à l’innovation dans l’IA et l’informatique avancée aujourd’hui, le parcours d’Intel est défini par une technologie révolutionnaire et un engagement à façonner l’avenir. Notre objectif est de permettre à chaque personne et organisation sur la planète de réaliser davantage grâce à une innovation qui change le monde.",
+       summary: "Résumé",
+       founding: "Fondation et premières années",
+       growth: "Croissance et domination",
+       diversification: "Diversification et concurrence",
+       modernEraTitle: "Ère moderne (2010–présent)",
+       modernEraDesc: "Intel a rencontré des défis pour suivre la fabrication avancée de puces par rapport à des concurrents comme TSMC et AMD, notamment dans les années 2010. Cependant, il reste un acteur majeur dans les CPU, le matériel IA, le réseautage et le cloud computing. Sous la direction récente, Intel investit massivement dans des usines de fabrication de puces aux États-Unis et vise à devenir une fonderie mondiale de semi-conducteurs.",
+       ourProducts: "Nos produits",
+       processors: "Processeurs",
+       processorsDesc: "Processeurs haute performance pour ordinateurs de bureau, portables et serveurs, y compris les familles Intel Core et Xeon.",
+       graphics: "Graphiques",
+       graphicsDesc: "Solutions graphiques intégrées et discrètes offrant des visuels époustouflants et une expérience de jeu fluide.",
+       fpgaAi: "FPGA & IA",
+       fpgaAiDesc: "Solutions avancées d’accélération FPGA et IA pour centres de données, réseaux et edge computing.",
+       latestNews: "Dernières nouvelles",
+       news1: "Intel annonce des puces IA de nouvelle génération améliorant l’efficacité des centres de données.",
+       news2: "Expansion des installations de fabrication de puces basées aux États-Unis d’Intel en cours.",
+       news3: "Intel s’associe aux leaders automobiles pour accélérer la technologie des véhicules autonomes.",
+       readMore: "Lire la suite",
+       joinTeam: "Rejoignez notre équipe",
+       joinDesc: "Faites partie d’un leader mondial qui stimule l’innovation et façonne l’avenir de la technologie. Explorez des opportunités de carrière passionnantes et aidez-nous à construire le monde de demain.",
+       viewOpenPositions: "Voir les postes ouverts",
+       contactLocation: "Contact & localisation",
+       intelHeadquarters: "Siège social d’Intel",
+       modal1960sTitle: "1968–1970s : Fondation et premières années",
+       modal1960sBody: "Intel a été fondé en 1968 par Robert Noyce et Gordon Moore, tous deux anciens employés de Fairchild Semiconductor. Ils ont nommé la société Intel, abréviation de « électronique intégrée ». Leur objectif était de construire des produits de mémoire semi-conducteurs avancés. En 1971, Intel a lancé le 4004, le premier microprocesseur commercial au monde, qui a révolutionné l’informatique.",
+       modal1980sTitle: "1980s–1990s : Croissance et domination",
+       modal1980sBody: "Dans les années 80, Intel s’est concentré sur les microprocesseurs, devenant le principal fournisseur des PC IBM. La sortie de l’Intel 8086 et plus tard de la série Pentium a aidé Intel à dominer le marché des ordinateurs personnels. Leur campagne marketing « Intel Inside » a rendu la marque célèbre.",
+       modal2000sTitle: "2000s : Diversification et concurrence",
+       modal2000sBody: "Face à la concurrence accrue d’AMD et des fabricants mondiaux de puces, Intel s’est diversifié dans des domaines comme les processeurs serveurs, les puces mobiles et les centres de données. La société a également commencé à investir dans la recherche et le développement pour rester à la pointe de l’innovation technologique."
+     },
+     de: {
+       brand: "Intel",
+       products: "Produkte",
+       supporters: "Unterstützer",
+       development: "Entwicklung",
+       partners: "Partner",
+       solutions: "Lösungen",
+       foundry: "Foundry",
+       search: "Suche",
+       signin: "Anmelden",
+       welcome: "Willkommen bei Intel!",
+       intro: "Von der Pionierarbeit am Mikroprozessor 1971 bis hin zur heutigen Innovation in KI und fortschrittlicher Computertechnik wird Intels Weg durch bahnbrechende Technologie und das Engagement zur Gestaltung der Zukunft geprägt. Unser Ziel ist es, jede Person und Organisation auf der Welt durch weltverändernde Innovation zu befähigen, mehr zu erreichen.",
+       summary: "Zusammenfassung",
+       founding: "Gründung und frühe Jahre",
+       growth: "Wachstum und Dominanz",
+       diversification: "Diversifizierung und Wettbewerb",
+       modernEraTitle: "Moderne Ära (2010–Heute)",
+       modernEraDesc: "Intel hatte in den 2010er Jahren Schwierigkeiten, mit der fortschrittlichen Chipfertigung von Wettbewerbern wie TSMC und AMD Schritt zu halten. Dennoch bleibt es ein wichtiger Akteur bei CPUs, KI-Hardware, Netzwerken und Cloud-Computing. Unter der aktuellen Führung investiert Intel stark in US-amerikanische Chipfertigungsstätten und strebt an, eine globale Halbleiter-Fab zu werden.",
+       ourProducts: "Unsere Produkte",
+       processors: "Prozessoren",
+       processorsDesc: "Leistungsstarke CPUs für Desktops, Laptops und Server, einschließlich der Intel Core- und Xeon-Familien.",
+       graphics: "Grafik",
+       graphicsDesc: "Integrierte und diskrete Grafiklösungen für beeindruckende Bilder und flüssiges Spielen.",
+       fpgaAi: "FPGA & KI",
+       fpgaAiDesc: "Fortschrittliche FPGA- und KI-Beschleunigungslösungen für Rechenzentren, Netzwerke und Edge-Computing.",
+       latestNews: "Neueste Nachrichten",
+       news1: "Intel kündigt KI-Chips der nächsten Generation zur Steigerung der Rechenzentrums-Effizienz an.",
+       news2: "Ausbau der US-amerikanischen Chipfertigungsanlagen von Intel im Gange.",
+       news3: "Intel arbeitet mit Automobilführern zusammen, um die Technologie für autonome Fahrzeuge zu beschleunigen.",
+       readMore: "Weiterlesen",
+       joinTeam: "Treten Sie unserem Team bei",
+       joinDesc: "Seien Sie Teil eines globalen Marktführers, der Innovation vorantreibt und die Zukunft der Technologie gestaltet. Entdecken Sie spannende Karrieremöglichkeiten und helfen Sie uns, die Welt von morgen zu gestalten.",
+       viewOpenPositions: "Offene Stellen ansehen",
+       contactLocation: "Kontakt & Standort",
+       intelHeadquarters: "Intel Firmenzentrale",
+       modal1960sTitle: "1968–1970er: Gründung und frühe Jahre",
+       modal1960sBody: "Intel wurde 1968 von Robert Noyce und Gordon Moore gegründet, beide ehemalige Mitarbeiter von Fairchild Semiconductor. Sie nannten das Unternehmen Intel, kurz für „Integrated Electronics“. Ihr Ziel war es, fortschrittliche Halbleiterspeicherprodukte zu bauen. 1971 brachte Intel den 4004 heraus, den ersten kommerziellen Mikroprozessor der Welt, der das Computing revolutionierte.",
+       modal1980sTitle: "1980er–1990er: Wachstum und Dominanz",
+       modal1980sBody: "In den 1980er Jahren verlagerte Intel seinen Fokus auf Mikroprozessoren und wurde Hauptlieferant für IBM-PCs. Die Veröffentlichung des Intel 8086 und später der Pentium-Serie half Intel, den PC-Markt zu dominieren. Ihre Marketingkampagne „Intel Inside“ machte die Marke bekannt.",
+       modal2000sTitle: "2000er: Diversifizierung und Wettbewerb",
+       modal2000sBody: "Mit zunehmendem Wettbewerb durch AMD und globale Chip-Hersteller expandierte Intel in Bereiche wie Serverprozessoren, mobile Chips und Rechenzentren. Das Unternehmen begann auch, in Forschung und Entwicklung zu investieren, um technologisch führend zu bleiben."
+     },
+     zh: {
+       brand: "英特尔",
+       products: "产品",
+       supporters: "支持者",
+       development: "开发",
+       partners: "合作伙伴",
+       solutions: "解决方案",
+       foundry: "代工",
+       search: "搜索",
+       signin: "登录",
+       welcome: "欢迎来到英特尔！",
+       intro: "从1971年开创微处理器时代，到今天推动人工智能和先进计算的创新，英特尔的历程以突破性技术和塑造未来的承诺为特征。我们的目标是通过改变世界的创新，让地球上的每个人和组织实现更多。",
+       summary: "摘要",
+       founding: "创立和早期阶段",
+       growth: "成长与主导",
+       diversification: "多元化与竞争",
+       modernEraTitle: "现代时代（2010年至今）",
+       modernEraDesc: "英特尔在2010年代面对先进芯片制造方面的挑战，尤其是与台积电和AMD等竞争对手相比。然而，它仍然是CPU、AI硬件、网络和云计算的重要参与者。在近期领导下，英特尔正大力投资美国芯片制造工厂，旨在成为全球半导体代工厂。",
+       ourProducts: "我们的产品",
+       processors: "处理器",
+       processorsDesc: "适用于台式机、笔记本和服务器的高性能CPU，包括英特尔酷睿和至强系列。",
+       graphics: "图形",
+       graphicsDesc: "集成和独立显卡解决方案，提供惊艳视觉效果和平滑游戏体验。",
+       fpgaAi: "FPGA与人工智能",
+       fpgaAiDesc: "先进的FPGA和人工智能加速解决方案，适用于数据中心、网络和边缘计算。",
+       latestNews: "最新新闻",
+       news1: "英特尔发布下一代人工智能芯片，提升数据中心效率。",
+       news2: "英特尔在美国的芯片制造厂扩建正在进行中。",
+       news3: "英特尔与汽车领导者合作，加速自动驾驶技术。",
+       readMore: "阅读更多",
+       joinTeam: "加入我们的团队",
+       joinDesc: "成为推动创新、塑造技术未来的全球领导者。探索激动人心的职业机会，帮助我们建设未来世界。",
+       viewOpenPositions: "查看职位空缺",
+       contactLocation: "联系方式与地址",
+       intelHeadquarters: "英特尔公司总部",
+       modal1960sTitle: "1968–1970年代：创立和早期阶段",
+       modal1960sBody: "英特尔由罗伯特·诺伊斯和戈登·摩尔于1968年创立，二人均为费尔柴尔德半导体的前员工。公司名称取自“集成电子”的缩写Intel。其目标是制造先进的半导体存储产品。1971年，英特尔发布了4004，这是世界上第一款商业微处理器，革新了计算机技术。",
+       modal1980sTitle: "1980年代–1990年代：成长与主导",
+       modal1980sBody: "1980年代，英特尔转向微处理器，成为IBM个人电脑的主要供应商。英特尔8086处理器及后续的奔腾系列帮助其主导了个人电脑市场。其“Intel Inside”营销活动使品牌家喻户晓。",
+       modal2000sTitle: "2000年代：多元化与竞争",
+       modal2000sBody: "随着AMD及全球芯片制造商的竞争加剧，英特尔扩展至服务器处理器、移动芯片和数据中心领域。公司也开始加大研发投入，以保持技术领先。"
+     },
+     ar: {
+       brand: "إنتل",
+       products: "المنتجات",
+       supporters: "الداعمون",
+       development: "التطوير",
+       partners: "الشركاء",
+       solutions: "الحلول",
+       foundry: "المسبك",
+       search: "بحث",
+       signin: "تسجيل الدخول",
+       welcome: "مرحبًا بكم في إنتل!",
+       intro: "من ابتكار المعالج الدقيق في عام 1971 إلى دفع الابتكار في الذكاء الاصطناعي والحوسبة المتقدمة اليوم، تُعرّف رحلة إنتل بالتكنولوجيا الرائدة والالتزام بتشكيل المستقبل. هدفنا هو تمكين كل شخص ومنظمة على هذا الكوكب لتحقيق المزيد من خلال الابتكار الذي يغير العالم.",
+       summary: "ملخص",
+       founding: "التأسيس والسنوات الأولى",
+       growth: "النمو والهيمنة",
+       diversification: "التنويع والمنافسة",
+       modernEraTitle: "العصر الحديث (2010–حتى الآن)",
+       modernEraDesc: "واجهت إنتل تحديات في مواكبة تصنيع الشرائح المتقدم مقارنة بالمنافسين مثل TSMC وAMD، خاصة في العقد 2010. لكنها تظل لاعبًا رئيسيًا في وحدات المعالجة المركزية وأجهزة الذكاء الاصطناعي والشبكات والحوسبة السحابية. تحت القيادة الحديثة، تستثمر إنتل بكثافة في مصانع تصنيع الشرائح في الولايات المتحدة وتهدف لأن تصبح مسبك أشباه الموصلات عالميًا.",
+       ourProducts: "منتجاتنا",
+       processors: "المعالجات",
+       processorsDesc: "وحدات معالجة مركزية عالية الأداء لأجهزة الكمبيوتر المكتبية والمحمولة والخوادم، بما في ذلك عائلات Intel Core وXeon.",
+       graphics: "الرسومات",
+       graphicsDesc: "حلول رسومات مدمجة ومستقلة توفر صورًا مذهلة وتجارب لعب سلسة.",
+       fpgaAi: "FPGA والذكاء الاصطناعي",
+       fpgaAiDesc: "حلول تسريع متقدمة لـ FPGA والذكاء الاصطناعي لمراكز البيانات والشبكات والحوسبة الطرفية.",
+       latestNews: "آخر الأخبار",
+       news1: "تعلن إنتل عن شرائح ذكاء اصطناعي جديدة تعزز كفاءة مراكز البيانات.",
+       news2: "جارٍ توسيع مرافق تصنيع الشرائح في الولايات المتحدة التابعة لإنتل.",
+       news3: "تتعاون إنتل مع رواد السيارات لتسريع تكنولوجيا المركبات ذاتية القيادة.",
+       readMore: "اقرأ المزيد",
+       joinTeam: "انضم إلى فريقنا",
+       joinDesc: "كن جزءًا من قائد عالمي يدفع الابتكار ويشكل مستقبل التكنولوجيا. استكشف فرص عمل مثيرة وساعدنا في بناء عالم الغد.",
+       viewOpenPositions: "عرض الوظائف المتاحة",
+       contactLocation: "الاتصال والموقع",
+       intelHeadquarters: "المقر الرئيسي لشركة إنتل",
+       modal1960sTitle: "1968–السبعينيات: التأسيس والسنوات الأولى",
+       modal1960sBody: "تأسست إنتل في عام 1968 على يد روبرت نويس وجوردون مور، وكلاهما كان موظفًا سابقًا في شركة فيرتشايلد لأشباه الموصلات. سموا الشركة إنتل، اختصارًا لـ “الإلكترونيات المتكاملة”. كان هدفهم بناء منتجات ذاكرة أشباه الموصلات المتقدمة. في عام 1971، أطلقت إنتل 4004، أول معالج دقيق تجاري في العالم، والذي أحدث ثورة في عالم الحوسبة.",
+       modal1980sTitle: "الثمانينيات والتسعينيات: النمو والهيمنة",
+       modal1980sBody: "في الثمانينيات، تحولت إنتل إلى التركيز على المعالجات الدقيقة، لتصبح المورد الرئيسي لأجهزة IBM الشخصية. ساعد إصدار Intel 8086 ولاحقًا سلسلة Pentium إنتل على السيطرة على سوق الحواسيب الشخصية. حملتهم التسويقية “Intel Inside” جعلت العلامة التجارية معروفة للجميع.",
+       modal2000sTitle: "الألفينيات: التنويع والمنافسة",
+       modal2000sBody: "مع زيادة المنافسة من AMD وشركات تصنيع الشرائح العالمية، توسعت إنتل إلى مجالات مثل معالجات الخوادم والشرائح المحمولة ومراكز البيانات. كما بدأت الشركة في الاستثمار في البحث والتطوير للبقاء في طليعة الابتكار التكنولوجي."
+     },
+     ja: {
+       brand: "インテル",
+       products: "製品",
+       supporters: "支援者",
+       development: "開発",
+       partners: "パートナー",
+       solutions: "ソリューション",
+       foundry: "ファウンドリ",
+       search: "検索",
+       signin: "サインイン",
+       welcome: "インテルへようこそ！",
+       intro: "1971年にマイクロプロセッサを開発して以来、今日ではAIや先進的なコンピューティングの革新を推進するインテルの歩みは、画期的な技術と未来を形作るコミットメントによって定義されています。私たちの目標は、世界中のすべての人と組織が、世界を変えるイノベーションによってより多くの成果を上げられるようにすることです。",
+       summary: "概要",
+       founding: "創業と初期の歩み",
+       growth: "成長と支配",
+       diversification: "多角化と競争",
+       modernEraTitle: "現代（2010年代～現在）",
+       modernEraDesc: "インテルは2010年代にTSMCやAMDなどの競合他社に比べて先進的なチップ製造で遅れをとる課題に直面しましたが、CPU、AIハードウェア、ネットワーキング、クラウドコンピューティングの主要プレーヤーであり続けています。最近のリーダーシップの下で、インテルは米国拠点のチップ製造工場に大規模投資を行い、グローバルな半導体ファウンドリを目指しています。",
+       ourProducts: "当社の製品",
+       processors: "プロセッサ",
+       processorsDesc: "デスクトップ、ノートパソコン、サーバー向けの高性能CPU。Intel CoreやXeonシリーズを含みます。",
+       graphics: "グラフィックス",
+       graphicsDesc: "美しい映像と滑らかなゲーム体験を提供する統合およびディスクリートグラフィックスソリューション。",
+       fpgaAi: "FPGAとAI",
+       fpgaAiDesc: "データセンター、ネットワーキング、エッジコンピューティング向けの高度なFPGAおよびAIアクセラレーションソリューション。",
+       latestNews: "最新ニュース",
+       news1: "インテルが次世代AIチップを発表し、データセンターの効率を向上。",
+       news2: "インテルの米国拠点のチップ製造施設の拡張が進行中。",
+       news3: "インテルが自動運転技術を加速するために自動車業界リーダーと提携。",
+       readMore: "続きを読む",
+       joinTeam: "チームに参加する",
+       joinDesc: "革新を推進し、技術の未来を形作るグローバルリーダーの一員になりましょう。エキサイティングなキャリア機会を探求し、明日の世界を共に築きましょう。",
+       viewOpenPositions: "求人を見る",
+       contactLocation: "連絡先と所在地",
+       intelHeadquarters: "インテル本社",
+       modal1960sTitle: "1968–1970年代：創業と初期の歩み",
+       modal1960sBody: "インテルは1968年にフェアチャイルド・セミコンダクターの元社員であるロバート・ノイスとゴードン・ムーアによって設立されました。社名は「集積電子回路」の略であるIntelに由来します。彼らの目標は高度な半導体メモリ製品を開発することでした。1971年にインテルは世界初の商用マイクロプロセッサ4004を発売し、コンピューティングの革新をもたらしました。",
+       modal1980sTitle: "1980年代〜1990年代：成長と支配",
+       modal1980sBody: "1980年代にインテルはマイクロプロセッサに注力し、IBM PCの主要サプライヤーとなりました。Intel 8086の発売とその後のPentiumシリーズはインテルがPC市場を支配するのに役立ちました。「Intel Inside」のマーケティングキャンペーンはブランドを家庭の名前にしました。",
+       modal2000sTitle: "2000年代：多角化と競争",
+       modal2000sBody: "AMDや世界的なチップメーカーからの競争が激化する中、インテルはサーバープロセッサ、モバイルチップ、データセンターなどの分野に拡大しました。同社は技術革新で先行するために研究開発にも投資を開始しました。"
+     }
+   };
+
+
+   // Helper function to set language and update text
+   function setLanguage(lang) {
+     const body = document.body;
+     // Set html lang attribute and direction for Arabic
+     document.documentElement.lang = lang;
+     if(lang === 'ar') {
+       document.documentElement.dir = 'rtl';
+       body.setAttribute('dir', 'rtl');
+     } else {
+       document.documentElement.dir = 'ltr';
+       body.setAttribute('dir', 'ltr');
+     }
+
+
+     // Replace text content by data-lang attribute
+     document.querySelectorAll('[data-lang]').forEach(el => {
+       const key = el.getAttribute('data-lang');
+       if (translations[lang] && translations[lang][key]) {
+         el.textContent = translations[lang][key];
+       }
+     });
+
+
+     // Update navbar and other text hardcoded outside data-lang
+     // For example, navbar brand and buttons
+     document.querySelector('.navbar-brand').textContent = translations[lang].brand || 'Intel';
+     document.querySelector('button.btn-outline-primary').textContent = translations[lang].search || 'Search';
+
+
+     // You can add more elements if needed
+   }
+
+
+   // On language selector change
+   document.querySelector('select.form-select').addEventListener('change', e => {
+     setLanguage(e.target.value);
+   });
+
+
+   // Initialize with English
+   setLanguage('en');
+ </script>
+</body>
+</html>
